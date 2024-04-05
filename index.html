@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/29ac88f093.js" crossorigin="anonymous"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Trang chủ</title>
+</head>
+
+<body ng-app="myapp" ng-controller="myCtr">
+    <div id="bg-popup"></div>
+    <div id="main-popup" style="display: none;">
+        <div id="close-1" style="float: right; cursor: pointer;">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </div>
+        <a href="#!danhmucsp/iphone" id="btn-chuyen"><img src="image/popup_banner.webp" alt="" width="100%"></a>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            // Đợi 5 giây
+            setTimeout(function () {
+                // Lấy thẻ popup
+                var popup = document.getElementById('main-popup');
+                var bgPopup = document.getElementById('bg-popup');
+                var chuyen = document.getElementById('btn-chuyen');
+                // Hiển thị popup
+                popup.style.display = 'block';
+                bgPopup.style.display = 'block';
+                var close = document.getElementById("close-1");
+                close.addEventListener("click", function () {
+                    popup.style.display = 'none';
+                })
+                close.addEventListener("click", function () {
+                    bgPopup.style.display = 'none';
+                })
+                chuyen.addEventListener("click",function(){
+                    popup.style.display = 'none';
+                })
+                chuyen.addEventListener("click",function(){
+                    bgPopup.style.display = 'none';
+                })
+                document.body.addEventListener("click",function(){
+                    popup.style.display = 'none';
+                })  
+                document.body.addEventListener("click",function(){
+                    bgPopup.style.display = 'none';
+                })
+            }, 2000);
+        });
+    </script>
+    <div ng-show="loading"
+        class="position-absolute top-0 start-0 end-0 bottom-0 text-bg-dark z-3 d-flex justify-content-center align-items-center fs-2"
+        controller="loading">
+        Đang tải...
+    </div>
+    <section class="header" ng-include="'layout/header.html'"></section>
+    <section ng-view></section>
+    <section class="footer" ng-include="'layout/footer.html'"></section>
+</body>
+<script src="js/main.js"></script>
+
+</html>

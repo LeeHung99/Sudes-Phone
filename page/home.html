@@ -1,0 +1,1363 @@
+<section class="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2500">
+                <img src="image/banner-5.png.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="image/banner-2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="image/banner-3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="image/banner-4.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+<section class="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="box-service" style="background-color: #EBF2FC;">
+                    <div class="icon-box-service">
+                        <img src="image/ser_1.svg" alt="">
+                    </div>
+                    <div class="info-box-service">
+                        <h3>Vận chuyển miễn phí</h3>
+                        <span>Hóa đơn trên 5 triệu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="box-service" style="background-color: #FAE9EF;">
+                    <div class="icon-box-service">
+                        <img src="image/ser_2.svg" alt="">
+                    </div>
+                    <div class="info-box-service">
+                        <h3>Quà tặng hấp dẫn</h3>
+                        <span>Hóa đơn trên 10 triệu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="box-service" style="background-color: #FFFBDB;">
+                    <div class="icon-box-service">
+                        <img src="image/ser_3.svg" alt="">
+                    </div>
+                    <div class="info-box-service">
+                        <h3>Chứng chỉ chất lượng</h3>
+                        <span>Sản phẩm chính hãng</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="box-service" style="background-color: #E9FFE3;">
+                    <div class="icon-box-service">
+                        <img src="image/ser_4.svg" alt="">
+                    </div>
+                    <div class="info-box-service">
+                        <h3>Hotline: 0962.62.5555</h3>
+                        <span>Hỗ trợ 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="box-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="banner-img">
+                    <a href="">
+                        <img src="image/img_3banner_1.webp" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="banner-img">
+                    <a href="">
+                        <img src="image/img_3banner_2.webp" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="banner-img">
+                    <a href="">
+                        <img src="image/img_3banner_3.webp" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="block-flash-sale">
+    <div class="container">
+        <div class="flash-sale">
+            <div class="block-sale">
+                <div class="block-title">
+                    <h2>
+                        <a href="">HOT SALE CUỐI TUẦN</a>
+                        <img src="image/ser_hot.svg" alt="">
+                    </h2>
+                </div>
+            </div>
+            <div class="block-product-sale">
+                <div class="row">
+                    <div class="col-lg-3" ng-repeat="sp in listSP | filter : {sale: '30'} | limitTo:4:2">
+                        <div class="box-product-sale">
+                            <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                            <div class="img-product">
+                                <a href="#!product-detail/{{sp.id}}">
+                                    <img src="{{sp.image}}" alt="">
+                                </a>
+                                <div class="action-button">
+                                    <a title="Xem nhanh" href="">
+                                        <img src="image/eye.svg" alt="">
+                                    </a>
+                                    <a title="Thêm vào yêu thích" href="">
+                                        <img src="image/heart.webp" alt="">
+                                    </a>
+                                    <a title="Thêm vào so sánh" href="">
+                                        <img src="image/repeat.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tick-tag">
+                                    <span>Trả góp 0%</span>
+                                    <span>BH 12 tháng</span>
+                                </div>
+                            </div>
+                            <div class="info-product">
+                                <h4>
+                                    <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                </h4>
+                                <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                <div class="price-product">
+                                    <span class="price-sale">
+                                        {{sp.price | number}}đ
+                                    </span>
+                                    <span class="price">
+                                        {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-product">
+                                <p>
+                                    Giảm trực tiếp 40%, tối đa
+                                    <strong style="color: #bf1e2e;">600.000 VNĐ</strong>
+                                    khi mở thẻ TP Bank EVO.
+                                </p>
+                            </div>
+                            <div class="product-count">
+                                <div class="count-item">
+                                    <div class="fire">
+                                        <img src="image/hot.svg" alt="">
+                                    </div>
+                                    <span style="color: white;">Đãn bán {{sp.sale*18}}</span>
+                                    <div class="count-down" style="width: {{sp.sale*3}}%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="">
+                    Xem tất cả <i class="fa-solid fa-angle-right"
+                        style="color: #ffffff;margin-left: 7px;margin-top: 3px; font-size: small;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="category">
+    <div class="container">
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="section-title">
+                <h2>DANH MỤC NỔI BẬT</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="#!danhmucsp/iphone" title="iPhone" class="item-category">
+                    <div class="box-category">
+                        <div class="img-box-category">
+                            <img src="image/cate_1.webp" alt="">
+                        </div>
+                        <h3>iPhone</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#!danhmucsp/macbook" title="iPhone" class="item-category">
+                    <div class="box-category">
+                        <div class="img-box-category">
+                            <img src="image/cate_2.webp" alt="">
+                        </div>
+                        <h3>MacBook</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#!danhmucsp/ipad" title="iPhone" class="item-category">
+                    <div class="box-category">
+                        <div class="img-box-category">
+                            <img src="image/cate_3.webp" alt="">
+                        </div>
+                        <h3>iPad</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#!danhmucsp/apple watch" title="iPhone" class="item-category">
+                    <div class="box-category">
+                        <div class="img-box-category">
+                            <img src="image/cate_4.webp" alt="">
+                        </div>
+                        <h3>Apple Watch</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="air-pod.html" title="iPhone" class="item-category">
+                    <div class="box-category">
+                        <div class="img-box-category">
+                            <img src="image/cate_5.webp" alt="">
+                        </div>
+                        <h3>Air Pod</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="" title="iPhone" class="item-category">
+                    <div class="box-category">
+                        <div class="img-box-category">
+                            <img src="image/cate_6.webp" alt="">
+                        </div>
+                        <h3>Phụ kiện</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-iphone">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="section-title">
+                <h2>IPHONE</h2>
+            </div>
+            <div class="tag-iphone">
+                <ul class="nav justify-content-center nav nav-tabs" id="myTab" role="tablist">
+                    <li>
+                        <button class="nav-link active" id="iphone15-seri" data-bs-toggle="tab"
+                            data-bs-target="#iphone15" type="button" role="tab" aria-controls="iphone15"
+                            aria-selected="true">
+                            iPhone 15 Series
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="iphone14-seri" data-bs-toggle="tab" data-bs-target="#iphone14"
+                            type="button" role="tab" aria-controls="iphone14" aria-selected="true">
+                            iPhone 14 Series
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="iphone13-seri" data-bs-toggle="tab" data-bs-target="#iphone13"
+                            type="button" role="tab" aria-controls="iphone13" aria-selected="true">
+                            iPhone 13 Series
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="iphone12-seri" data-bs-toggle="tab" data-bs-target="#iphone12"
+                            type="button" role="tab" aria-controls="iphone12" aria-selected="true">
+                            iPhone 12 Series
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content mt-5" id="myTabContent">
+            <div class="tab-pane fade show active" id="iphone15" role="tabpanel" aria-labelledby="iphone15"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3" ng-repeat="sp in listSP | filter : {type: 'iphone 15 SERIES'} | limitTo:8:0">
+                        <div class="box-product-sale" id="box-product">
+                            <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                            <div class="img-product">
+                                <a href="#!product-detail/{{sp.id}}">
+                                    <img src="{{sp.image}}" alt="">
+                                </a>
+                                <div class="action-button">
+                                    <a title="Xem nhanh" href="">
+                                        <img src="image/eye.svg" alt="">
+                                    </a>
+                                    <a title="Thêm vào yêu thích" href="">
+                                        <img src="image/heart.webp" alt="">
+                                    </a>
+                                    <a title="Thêm vào so sánh" href="">
+                                        <img src="image/repeat.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tick-tag">
+                                    <span>Trả góp 0%</span>
+                                    <span>BH 12 tháng</span>
+                                </div>
+                            </div>
+                            <div class="info-product">
+                                <h4>
+                                    <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                </h4>
+                                <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                <div class="price-product">
+                                    <span class="price-sale">
+                                        {{sp.price | number}} đ
+                                    </span>
+                                    <span class="price">
+                                        {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-product">
+                                <p>
+                                    Giảm
+                                    <strong style="color: #bf1e2e;">250.000đ</strong>
+                                    khi mua kèm gói bảo hành VIP 12 tháng 1 Đổi 1.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-product">
+                    <a href="#!danhmucsp/iphone">Xem tất cả <i class="fa-solid fa-angle-right"
+                            style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="iphone14" role="tabpanel" aria-labelledby="iphone14" tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3" ng-repeat="sp in listSP | filter : {type: 'iphone 14 SERIES'} | limitTo:8:0">
+                        <div class="box-product-sale" id="box-product">
+                            <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                            <div class="img-product">
+                                <a href="#!product-detail/{{sp.id}}">
+                                    <img src="{{sp.image}}" alt="">
+                                </a>
+                                <div class="action-button">
+                                    <a title="Xem nhanh" href="">
+                                        <img src="image/eye.svg" alt="">
+                                    </a>
+                                    <a title="Thêm vào yêu thích" href="">
+                                        <img src="image/heart.webp" alt="">
+                                    </a>
+                                    <a title="Thêm vào so sánh" href="">
+                                        <img src="image/repeat.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tick-tag">
+                                    <span>Trả góp 0%</span>
+                                    <span>BH 12 tháng</span>
+                                </div>
+                            </div>
+                            <div class="info-product">
+                                <h4>
+                                    <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                </h4>
+                                <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                <div class="price-product">
+                                    <span class="price-sale">
+                                        {{sp.price | number}} đ
+                                    </span>
+                                    <br>
+                                    <span class="price">
+                                        {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-product">
+                                <p>
+                                    Giảm
+                                    <strong style="color: #bf1e2e;">250.000đ</strong>
+                                    khi mua kèm gói bảo hành VIP 12 tháng 1 Đổi 1.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-product">
+                    <a href="#!danhmucsp/iphone">Xem tất cả <i class="fa-solid fa-angle-right"
+                            style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="iphone13" role="tabpanel" aria-labelledby="iphone13" tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3" ng-repeat="sp in listSP | filter : {type: 'iphone 13 SERIES'} | limitTo:8:0">
+                        <div class="box-product-sale" id="box-product">
+                            <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                            <div class="img-product">
+                                <a href="#!product-detail/{{sp.id}}">
+                                    <img src="{{sp.image}}" alt="">
+                                </a>
+                                <div class="action-button">
+                                    <a title="Xem nhanh" href="">
+                                        <img src="image/eye.svg" alt="">
+                                    </a>
+                                    <a title="Thêm vào yêu thích" href="">
+                                        <img src="image/heart.webp" alt="">
+                                    </a>
+                                    <a title="Thêm vào so sánh" href="">
+                                        <img src="image/repeat.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tick-tag">
+                                    <span>Trả góp 0%</span>
+                                    <span>BH 12 tháng</span>
+                                </div>
+                            </div>
+                            <div class="info-product">
+                                <h4>
+                                    <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                </h4>
+                                <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                <div class="price-product">
+                                    <span class="price-sale">
+                                        {{sp.price | number}} đ
+                                    </span>
+                                    <span class="price">
+                                        {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-product">
+                                <p>
+                                    Giảm
+                                    <strong style="color: #bf1e2e;">250.000đ</strong>
+                                    khi mua kèm gói bảo hành VIP 12 tháng 1 Đổi 1.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-product">
+                    <a href="#!danhmucsp/iphone">Xem tất cả <i class="fa-solid fa-angle-right"
+                            style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="iphone12" role="tabpanel" aria-labelledby="iphone13" tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3" ng-repeat="sp in listSP | filter : {type: 'iphone 12 SERIES'} | limitTo:8:0">
+                        <div class="box-product-sale" id="box-product">
+                            <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                            <div class="img-product">
+                                <a href="">
+                                    <img src="{{sp.image}}" alt="">
+                                </a>
+                                <div class="action-button">
+                                    <a title="Xem nhanh" href="">
+                                        <img src="image/eye.svg" alt="">
+                                    </a>
+                                    <a title="Thêm vào yêu thích" href="">
+                                        <img src="image/heart.webp" alt="">
+                                    </a>
+                                    <a title="Thêm vào so sánh" href="">
+                                        <img src="image/repeat.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tick-tag">
+                                    <span>Trả góp 0%</span>
+                                    <span>BH 12 tháng</span>
+                                </div>
+                            </div>
+                            <div class="info-product">
+                                <h4>
+                                    <a href="">{{sp.name}}</a>
+                                </h4>
+                                <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                <div class="price-product">
+                                    <span class="price-sale">
+                                        {{sp.price | number}} đ
+                                    </span>
+                                    <span class="price">
+                                        {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-product">
+                                <p>
+                                    Giảm
+                                    <strong style="color: #bf1e2e;">250.000đ</strong>
+                                    khi mua kèm gói bảo hành VIP 12 tháng 1 Đổi 1.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-product">
+                    <a href="#!danhmucsp/iphone">Xem tất cả <i class="fa-solid fa-angle-right"
+                            style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-ipad">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="section-title">
+                <h2>IPAD</h2>
+            </div>
+            <div class="tag-iphone">
+                <ul class="nav justify-content-center nav nav-tabs" id="myTab" role="tablist">
+                    <li>
+                        <button class="nav-link active" id="ipad-pro" data-bs-toggle="tab" data-bs-target="#ipadpro"
+                            type="button" role="tab" aria-controls="ipadpro" aria-selected="true">
+                            iPad Pro
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="ipad-air" data-bs-toggle="tab" data-bs-target="#ipadair"
+                            type="button" role="tab" aria-controls="ipadair" aria-selected="true">
+                            iPad Air
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="ipad-mini" data-bs-toggle="tab" data-bs-target="#ipadmini"
+                            type="button" role="tab" aria-controls="ipadmini" aria-selected="true">
+                            iPad Mini
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="ipad-102" data-bs-toggle="tab" data-bs-target="#ipad102"
+                            type="button" role="tab" aria-controls="ipad102" aria-selected="true">
+                            iPad 10.2
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content mt-5" id="myTabContent">
+                <div class="tab-pane fade show active" id="ipadpro" role="tabpanel" aria-labelledby="ipadpro"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type: 'ipad pro SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale">
+                                            {{sp.price | number}}
+                                        </span>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale /100) | number}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Trả góp qua Home PayLater giảm thêm 5% tối đa
+                                        <strong style="color: #bf1e2e;">500.000 VNĐ</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-product">
+                        <a href="">Xem tất cả <i class="fa-solid fa-angle-right"
+                                style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="ipadair" role="tabpanel" aria-labelledby="ipadair" tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type: 'ipad air SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale">
+                                            {{sp.price | number}}
+                                        </span>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale /100) | number}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Trả góp qua Home PayLater giảm thêm 5% tối đa
+                                        <strong style="color: #bf1e2e;">500.000 VNĐ</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="ipadmini" role="tabpanel" aria-labelledby="ipadmini" tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type: 'ipad mini SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale">
+                                            {{sp.price | number}}
+                                        </span>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale /100) | number}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Trả góp qua Home PayLater giảm thêm 5% tối đa
+                                        <strong style="color: #bf1e2e;">500.000 VNĐ</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="ipad102" role="tabpanel" aria-labelledby="ipad102" tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type: 'ipad 10.2 SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale">
+                                            {{sp.price | number}}
+                                        </span>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale /100) | number}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Trả góp qua Home PayLater giảm thêm 5% tối đa
+                                        <strong style="color: #bf1e2e;">500.000 VNĐ</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banner-new">
+    <div class="container">
+        <div class="section-title">
+            <h2>Thông tin sản phẩm mới</h2>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="product-content">
+                    <span>iPhone 15 - 15 Pro Max</span>
+                    <h3>iPhone 15 Pro Max sẽ có viền màn hình mỏng nhất thế giới.</h3>
+                    <p><em>
+                            Theo Apple Insider, dựa trên những bản CAD (thiết kế có sự hỗ trợ của máy tính) rò rỉ
+                            gần đây,
+                            iPhone 15 Pro Max có thể dày hơn iPhone 14 Pro Max, mặc dù phần lồi camera nhỏ hơn một
+                            chút.
+                            Thông tin mới nhất từ chuyên gia rò rỉ Ice Universe tiết lộ kích thước 1,55 mm của phần
+                            khung
+                            viền trên iPhone 15 Pro Max sẽ phá kỷ lục trước đó được thiết lập bởi Xiaomi 13 là
+                            1,81mm.
+                        </em></p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="banner-news">
+                    <img src="image/section_banner_new_product.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-mac">
+    <div class="container">
+        <div class="row" style="margin-bottom: 35px;margin-top: 40px;">
+            <div class="section-title">
+                <h2>MACBOOK - IMAC</h2>
+            </div>
+            <div class="tag-iphone">
+                <ul class="nav justify-content-center nav nav-tabs" id="myTab" role="tablist">
+                    <li>
+                        <button class="nav-link active" id="macbook-pro" data-bs-toggle="tab"
+                            data-bs-target="#macbookpro" type="button" role="tab" aria-controls="macbookpro"
+                            aria-selected="true">
+                            MacBook Pro
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="macbook-air" data-bs-toggle="tab" data-bs-target="#macbookair"
+                            type="button" role="tab" aria-controls="macbookair" aria-selected="true">
+                            MacBook Air
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content mt-5" id="myTabContent">
+                <div class="tab-pane fade show active" id="macbookpro" role="tabpanel" aria-labelledby="macbookpro"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type: 'macbook pro SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale">
+                                            {{sp.price | number}} đ
+                                        </span>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale /100) | number}} đ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Hỗ trợ
+                                        <strong style="color: #bf1e2e;">trả góp 0%</strong>
+                                        chỉ cần <strong style="color: #bf1e2e;">CCCD gắn chip</strong>
+                                        hoặc<strong style="color: #bf1e2e;"> 0% qua thẻ tín dụng</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-product">
+                        <a href="">Xem tất cả <i class="fa-solid fa-angle-right"
+                                style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="macbookair" role="tabpanel" aria-labelledby="macbookpro" tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type: 'macbook air SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale">
+                                            {{sp.price | number}} đ
+                                        </span>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale /100) | number}} đ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Hỗ trợ
+                                        <strong style="color: #bf1e2e;">trả góp 0%</strong>
+                                        chỉ cần <strong style="color: #bf1e2e;">CCCD gắn chip</strong>
+                                        hoặc<strong style="color: #bf1e2e;"> 0% qua thẻ tín dụng</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-apple-watch">
+    <div class="container">
+        <div class="row" style="margin-bottom: 35px;margin-top: 40px;">
+            <div class="section-title">
+                <h2>APPLE WATCH</h2>
+            </div>
+            <div class="tag-iphone">
+                <ul class="nav justify-content-center nav nav-tabs" id="myTab" role="tablist">
+                    <li>
+                        <button class="nav-link active" id="apple-watch-ultra" data-bs-toggle="tab"
+                            data-bs-target="#applewatchultra" type="button" role="tab" aria-controls="applewatchultra"
+                            aria-selected="true">
+                            Apple Watch Ultra
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="apple-watch-s7" data-bs-toggle="tab" data-bs-target="#applewatchs7"
+                            type="button" role="tab" aria-controls="applewatchs7" aria-selected="true">
+                            Apple Watch S7
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="apple-watch-se" data-bs-toggle="tab" data-bs-target="#applewatchse"
+                            type="button" role="tab" aria-controls="applewatchse" aria-selected="true">
+                            Apple Watch SE
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="apple-watch-s8" data-bs-toggle="tab" data-bs-target="#applewatchs8"
+                            type="button" role="tab" aria-controls="applewatchs8" aria-selected="true">
+                            Apple Watch S8
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" id="apple-watch-s3" data-bs-toggle="tab" data-bs-target="#applewatchs3"
+                            type="button" role="tab" aria-controls="applewatchs3" aria-selected="true">
+                            Apple Watch S3
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content mt-5" id="myTabContent">
+                <div class="tab-pane fade show active" id="applewatchultra" role="tabpanel"
+                    aria-labelledby="applewatchultra" tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type:'apple watch ultra SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product" style="display: none;">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale" style="display: none;">
+                                            {{sp.price | number}} đ
+                                        </span>
+                                        <br>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Hỗ trợ
+                                        <strong style="color: #bf1e2e;">trả góp 0%</strong>
+                                        chỉ cần <strong style="color: #bf1e2e;">CCCD gắn chip</strong>
+                                        hoặc<strong style="color: #bf1e2e;"> 0% qua thẻ tín dụng</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-product">
+                        <a href="">Xem tất cả <i class="fa-solid fa-angle-right"
+                                style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="applewatchs7" role="tabpanel" aria-labelledby="applewatchs7"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type:'apple watch S7 SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product" style="display: none;">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale" style="display: none;">
+                                            {{sp.price | number}} đ
+                                        </span>
+                                        <br>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Hỗ trợ
+                                        <strong style="color: #bf1e2e;">trả góp 0%</strong>
+                                        chỉ cần <strong style="color: #bf1e2e;">CCCD gắn chip</strong>
+                                        hoặc<strong style="color: #bf1e2e;"> 0% qua thẻ tín dụng</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-product">
+                        <a href="">Xem tất cả <i class="fa-solid fa-angle-right"
+                                style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="applewatchse" role="tabpanel" aria-labelledby="applewatchse"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type:'apple watch se SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product" style="display: none;">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale" style="display: none;">
+                                            {{sp.price | number}} đ
+                                        </span>
+                                        <br>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Hỗ trợ
+                                        <strong style="color: #bf1e2e;">trả góp 0%</strong>
+                                        chỉ cần <strong style="color: #bf1e2e;">CCCD gắn chip</strong>
+                                        hoặc<strong style="color: #bf1e2e;"> 0% qua thẻ tín dụng</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-product">
+                        <a href="">Xem tất cả <i class="fa-solid fa-angle-right"
+                                style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="applewatchs8" role="tabpanel" aria-labelledby="applewatchs8"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3"
+                            ng-repeat="sp in listSP | filter : {type:'apple watch s8 SERIES'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product" style="display: none;">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale" style="display: none;">
+                                            {{sp.price | number}} đ
+                                        </span>
+                                        <br>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Hỗ trợ
+                                        <strong style="color: #bf1e2e;">trả góp 0%</strong>
+                                        chỉ cần <strong style="color: #bf1e2e;">CCCD gắn chip</strong>
+                                        hoặc<strong style="color: #bf1e2e;"> 0% qua thẻ tín dụng</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-product">
+                        <a href="">Xem tất cả <i class="fa-solid fa-angle-right"
+                                style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="applewatchs3" role="tabpanel" aria-labelledby="applewatchs3"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-3" ng-repeat="sp in listSP | filter : {type:'apple watch s3'} | limitTo:8:0">
+                            <div class="box-product-sale" id="box-product">
+                                <span class="flash-sale-product" style="display: none;">Giảm {{sp.sale}}%</span>
+                                <div class="img-product">
+                                    <a href="#!product-detail/{{sp.id}}">
+                                        <img src="{{sp.image}}" alt="">
+                                    </a>
+                                    <div class="action-button">
+                                        <a title="Xem nhanh" href="">
+                                            <img src="image/eye.svg" alt="">
+                                        </a>
+                                        <a title="Thêm vào yêu thích" href="">
+                                            <img src="image/heart.webp" alt="">
+                                        </a>
+                                        <a title="Thêm vào so sánh" href="">
+                                            <img src="image/repeat.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="tick-tag">
+                                        <span>Trả góp 0%</span>
+                                        <span>BH 12 tháng</span>
+                                    </div>
+                                </div>
+                                <div class="info-product">
+                                    <h4>
+                                        <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                    </h4>
+                                    <button class="btn btn-danger float-end" title="Thêm vào giỏ" ng-click="addToCart(sp)"><i class="fa-solid fa-cart-plus"></i></button>
+                                    <div class="price-product">
+                                        <span class="price-sale" style="display: none;">
+                                            {{sp.price | number}} đ
+                                        </span>
+                                        <br>
+                                        <span class="price">
+                                            {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-product">
+                                    <p>
+                                        Hỗ trợ
+                                        <strong style="color: #bf1e2e;">trả góp 0%</strong>
+                                        chỉ cần <strong style="color: #bf1e2e;">CCCD gắn chip</strong>
+                                        hoặc<strong style="color: #bf1e2e;"> 0% qua thẻ tín dụng</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-product">
+                        <a href="">Xem tất cả <i class="fa-solid fa-angle-right"
+                                style="color: #000000;margin-left: 7px;margin-top: 3px; font-size: small;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="news">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card box-news">
+                    <a href="" class="nav-link">
+                        <img src="image/news-1.webp" alt="" width="100%">
+                    </a>
+                    <div class="card-body">
+                        <a href="" class="nav-link">
+                            <h5 class="card-title">
+                                iPhone đã đúng khi không đụng đến tính năng...
+                            </h5>
+                        </a>
+                        <p class="card-text">
+                            iPhone vẫn kiên định với thiết kế tai thỏ suốt nhiều năm dù bị nhiều người dùng chỉ
+                            trích...
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="color: #8f8f8f;"></i>
+                            11/7/2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card box-news">
+                    <a href="" class="nav-link">
+                        <img src="image/news-2.webp" alt="" width="100%">
+                    </a>
+                    <div class="card-body">
+                        <a href="" class="nav-link">
+                            <h5 class="card-title">
+                                iPhone đã đúng khi không đụng đến tính năng...
+                            </h5>
+                        </a>
+                        <p class="card-text">
+                            iPhone vẫn kiên định với thiết kế tai thỏ suốt nhiều năm dù bị nhiều người dùng chỉ
+                            trích...
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="color: #8f8f8f;"></i>
+                            11/7/2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card box-news">
+                    <a href="" class="nav-link">
+                        <img src="image/news-3.webp" alt="" width="100%">
+                    </a>
+                    <div class="card-body">
+                        <a href="" class="nav-link">
+                            <h5 class="card-title">
+                                iPhone đã đúng khi không đụng đến tính năng...
+                            </h5>
+                        </a>
+                        <p class="card-text">
+                            iPhone vẫn kiên định với thiết kế tai thỏ suốt nhiều năm dù bị nhiều người dùng chỉ
+                            trích...
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="color: #8f8f8f;"></i>
+                            11/7/2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card box-news">
+                    <a href="" class="nav-link">
+                        <img src="image/news-4.webp" alt="" width="100%">
+                    </a>
+                    <div class="card-body">
+                        <a href="" class="nav-link">
+                            <h5 class="card-title">
+                                iPhone đã đúng khi không đụng đến tính năng...
+                            </h5>
+                        </a>
+                        <p class="card-text">
+                            iPhone vẫn kiên định với thiết kế tai thỏ suốt nhiều năm dù bị nhiều người dùng chỉ
+                            trích...
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="color: #8f8f8f;"></i>
+                            11/7/2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

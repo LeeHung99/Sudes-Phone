@@ -1,0 +1,388 @@
+<link rel="stylesheet" href="css/category.css">
+<section class="path-title text-bg-light">
+    <div class="container d-flex p-2">
+        <a href="#" class="nav-link">Trang Chủ</a>
+        <span class="px-2">/</span>
+        <a href="#!danhmucsp/{{title}}" class="nav-link text-danger">{{title | uppercase}}</a>
+    </div>
+</section>
+<section class="main-category">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-4">
+                <div class="tilte-category text-center">
+                    <h2>{{title | uppercase}}</h2>
+                </div>
+            </div>
+            <div class="col-md-12 p-4">
+                <div class="banner-category">
+                    <img src="{{image}}" alt="" class="rounded-3" width="100%">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row d-flex justify-content-center p-4">
+                    <a href="#!danhmucsp/{{cate.typedetail}}" class="item-category-ds" ng-repeat="cate in catedetail">
+                        <div class="box-category">
+                            <div class="img-box-category">
+                                <img src="{{cate.image}}" alt="">
+                            </div>
+                            <h6>{{cate.typedetail}}</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-between align-middle p-2 rounded-2"
+                style="background: #f1f1f1;">
+                <div class="sort-category">
+                    <div class="sort-filter">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn border btn-filter" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <i class="fa-solid fa-filter"></i> Bộ Lọc
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog m-0">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                        CHỌN MỨC GIÁ
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseOne"
+                                                    class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Dưới 2 triệu
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Từ 2 triệu đến 6 triệu
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Từ 6 triệu đến 15 triệu
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Từ 15 triệu đến 20 triệu
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseTwo"
+                                                        aria-expanded="false"
+                                                        aria-controls="panelsStayOpen-collapseTwo">
+                                                        LOẠI SẢN PHẨM
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseTwo"
+                                                    class="accordion-collapse collapse">
+                                                    <div class="accordion-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Điện thoại
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseThree"
+                                                        aria-expanded="false"
+                                                        aria-controls="panelsStayOpen-collapseThree">
+                                                        THƯƠNG HIỆU
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseThree"
+                                                    class="accordion-collapse collapse">
+                                                    <div class="accordion-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Aplle
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseFour"
+                                                        aria-expanded="false"
+                                                        aria-controls="panelsStayOpen-collapseFour">
+                                                        MÀU SẮC
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseFour"
+                                                    class="accordion-collapse collapse">
+                                                    <div class="accordion-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Vàng
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Tím
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Đỏ
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Xanh
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Hồng
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseSix"
+                                                        aria-expanded="false"
+                                                        aria-controls="panelsStayOpen-collapseSix">
+                                                        DUNG LƯỢNG
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseSix"
+                                                    class="accordion-collapse collapse">
+                                                    <div class="accordion-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                64GB
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                128GB
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                256GB
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                512GB
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                1TB
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseFive"
+                                                        aria-expanded="false"
+                                                        aria-controls="panelsStayOpen-collapseFive">
+                                                        DUNG LƯỢNG
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseFive"
+                                                    class="accordion-collapse collapse">
+                                                    <div class="accordion-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                New
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Like new
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Trả góp
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked">
+                                                                Có khuyến mãi
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort-category-right">
+                    <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">
+                                <i class="fa-solid fa-arrow-down-a-z"></i><strong>Xếp theo</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link text-bg-dark" aria-current="page" ng-click="sort=''">Mặc định</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link border" ng-click="sort='name'">Tên A-Z</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link border" ng-click="sort='-name'">Tên Z-A</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link border" ng-click="sort='price'">Giá thấp đến cao</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border" ng-click="sort='-price'">Giá cao xuống thấp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12 mt-4">
+                <div class="row">
+                    <div class="col-lg-3" ng-repeat="sp in category | filter : {name : title} | orderBy:sort | limitTo:limit:start">
+                        <div class="box-product-sale" id="box-product">
+                            <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                            <div class="img-product">
+                                <a href="#!product-detail/{{sp.id}}">
+                                    <img src="{{sp.image}}" alt="">
+                                </a>
+                                <div class="action-button">
+                                    <a title="Xem nhanh" href="">
+                                        <img src="image/eye.svg" alt="">
+                                    </a>
+                                    <a title="Thêm vào yêu thích" href="">
+                                        <img src="image/heart.webp" alt="">
+                                    </a>
+                                    <a title="Thêm vào so sánh" href="">
+                                        <img src="image/repeat.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="tick-tag">
+                                    <span>Trả góp 0%</span>
+                                    <span>BH 12 tháng</span>
+                                </div>
+                            </div>
+                            <div class="info-product">
+                                <h4>
+                                    <a href="#!product-detail/{{sp.id}}">{{sp.name}}</a>
+                                </h4>
+                                <button class="btn btn-danger float-end" ng-click="addToCart(sp)" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></button>
+                                <div class="price-product">
+                                    <span class="price-sale">
+                                        {{sp.price | number}} đ
+                                    </span>
+                                    <span class="price">
+                                        {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-product">
+                                <p>
+                                    Giảm
+                                    <strong style="color: #bf1e2e;">250.000đ</strong>
+                                    khi mua kèm gói bảo hành VIP 12 tháng 1 Đổi 1.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item {{page==1 ? 'disabled' : ''}}">
+                                <button class="page-link" ng-click="changePage(page-1)"><i class="fa-solid fa-angles-left"></i></button>
+                            </li>
+                            <li class="page-item" ng-repeat="trang in totalPage()">
+                                <button class="page-link" ng-click="changePage(trang)">{{trang}}</button>
+                            </li>
+                            <li class="page-item {{page==totalPage().length ? 'disabled' : ''}}">
+                                <button class="page-link" ng-click="changePage(page+1)"><i class="fa-solid fa-angles-right"></i></button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

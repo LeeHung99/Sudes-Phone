@@ -1,0 +1,77 @@
+[
+    {
+        "type" : "iphone",
+        "typedetail" : "iPhone 15",
+        "image" : "image/cate-iphone-14.webp"
+    },
+    {
+        "type" : "iphone",
+        "typedetail" : "iPhone 14",
+        "image" : "image/cate-iphone-14.webp"
+    },
+    {
+        "type" : "iphone",
+        "typedetail" : "iPhone 13",
+        "image" : "image/cate-iphone-13.webp"
+    },
+    {
+        "type" : "iphone",
+        "typedetail" : "iPhone 12",
+        "image" : "image/cate-iphone-12.webp"
+    },
+    {
+        "type" : "ipad",
+        "typedetail" : "iPad Pro",
+        "image" : "image/cate-ipad-pro.webp"
+    },
+    {
+        "type" : "ipad",
+        "typedetail" : "iPad Air",
+        "image" : "image/cate-ipad-air.webp"
+    },
+    {
+        "type" : "ipad",
+        "typedetail" : "iPad Mini",
+        "image" : "image/cate-ipad-mini.webp"
+    },
+    {
+        "type" : "ipad",
+        "typedetail" : "iPad 10.2",
+        "image" : "image/cate-ipad-10.2.webp"
+    },
+    {
+        "type" : "macbook",
+        "typedetail" : "MacBook Pro",
+        "image" : "image/cate-macbook-pro.webp"
+    },
+    {
+        "type" : "macbook",
+        "typedetail" : "MacBook Air",
+        "image" : "image/cate-macbook-air.webp"
+    },
+    {
+        "type" : "apple watch",
+        "typedetail" : "Apple Watch Ultra",
+        "image" : "image/cate-apple watch ultra.webp"
+    },
+    {
+        "type" : "apple watch",
+        "typedetail" : "Apple Watch s7",
+        "image" : "image/cate-apple watch s7.webp"
+    },
+    {
+        "type" : "apple watch",
+        "typedetail" : "Apple Watch SE",
+        "image" : "image/cate-apple watch se.webp"
+    },
+    {
+        "type" : "apple watch",
+        "typedetail" : "Apple Watch s8",
+        "image" : "image/cate-apple watch s8.webp"
+    }, 
+    {
+        "type" : "apple watch",
+        "typedetail" : "Apple Watch s3",
+        "image" : "image/cate-apple watch s3.webp"
+    }
+]

@@ -1,0 +1,136 @@
+<section class="main-paynow p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12 text-center pb-5">
+                        <img src="image/checkout_logo.webp" alt="">
+                    </div>
+                    <form name="frmPaynow">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex justify-content-between align-middle">
+                                    <h5>Thông tin nhận hàng</h5>
+                                    <a href="#!login" class="nav-link text-primary">
+                                        <i class="fa-solid fa-user"></i>
+                                        Đăng nhập
+                                    </a>
+                                </div>
+                                <div class="mb-2">
+                                    <label>Họ và tên</label>
+                                    <input type="text" class="form-control" name="name" ng-model="name" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label>Email</label>
+                                    <input type="email" name="email" ng-model="email" class="form-control"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com$" required>
+                                </div>
+                                <div ng-show="frmPaynow.email.$dirty && frmPaynow.email.$invalid" class="text-danger">
+                                    Email
+                                    không hợp lệ</div>
+                                <div class="mb-2">
+                                    <label>Số điện thoại</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label>Địa chỉ ( tùy chọn )</label>
+                                    <input type="text" class="form-control" name="address" ng-model="address" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="tinh">Tỉnh / Thành Phố</label>
+                                    <select class="form-select" ng-options="t.Name for t in dsTinh" ng-model="tinh"
+                                        id="tinh" name="tinh"></select>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="huyen">Quận / Huyện</label>
+                                    <select class="form-select" ng-options="h.Name for h in tinh.Districts"
+                                        ng-model="huyen"></select>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="xa">Phường / Xã</label>
+                                    <select class="form-select" ng-options="x.Name for x in huyen.Wards"
+                                        ng-model="xa"></select>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <textarea class="form-control" placeholder="Leave a comment here"
+                                        id="floatingTextarea" style="height: 100px"></textarea>
+                                    <label for="floatingTextarea">Ghi chú</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="box-check-radio mb-3">
+                                    <h5>Vận chuyển</h5>
+                                    <div ng-show="!frmPaynow.address.$invalid" class="border p-3 rounded-2">
+                                        <input class="form-check-input" type="radio" checked>
+                                        <span class="px-2">Giao hàng tận nơi</span>
+                                        <span class="float-end">{{shipcod | number}}</span>
+                                    </div>
+                                    <div ng-show="frmPaynow.address.$invalid" class="alert alert-danger">Vui lòng nhập thông tin nhận hàng</div>
+                                </div>
+                                <div class="box-check-radio">
+                                    <h5>Thanh toán</h5>
+                                    <div class="border p-3 rounded-2">
+                                        <input class="form-check-input rounded-circle" type="checkbox" ng-model="checkout">
+                                        <span class="px-2">Thanh toán khi giao hàng (COD)</span>
+                                        <span class="float-end"><i class="fa-regular fa-money-bill-1"></i></span>
+                                    </div>
+                                    <div class="border p-3 rounded-bottom bg-secondary-subtle" ng-show="checkout">
+                                        <span>Bạn chỉ cần thanh toán khi nhận hàng</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="border-bottom pb-4">Đơn hàng ({{dem}} Sản phẩm)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr class="align-middle" ng-repeat="sp in cart">
+                            <td><img src="{{sp.image}}" alt="" width="100px"></td>
+                            <td>
+                                {{sp.name}} <br>
+                                {{sp.color}} <br>
+                                Số Lượng: {{sp.quantity}}
+                            </td>
+                            <td>{{(sp.price - (sp.price * sp.sale / 100 )) * sp.quantity | number}}đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="discount border-bottom pb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control rounded-2" placeholder="Nhập mã giảm giá" ng-model="mgg" ng-model-options="{updateOn: 'blur'}">
+                        <!-- <button class="btn btn-primary ms-2 rounded-2">Áp dụng</button> -->
+                    </div>
+                    <div ng-if="mgg && mgg!=discount" class="text-danger">Mã giảm giá không tồn tại</div>
+                </div>
+                <div class="total-pay-now border-bottom py-2">
+                    <div class="d-flex justify-content-between">
+                        <span>Tạm tính</span>
+                        <span>{{calculateTotal() | number}}đ</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Phí vận chuyển</span>
+                        <span>{{shipcod | number}} đ</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Áp dụng mã giảm giá <strong ng-if="mgg==discount">"{{mgg}}"</strong></span>
+                        <span ng-if="mgg==discount">{{priceDiscount | number}} đ</span>
+                    </div>
+                </div>
+                <div class="py-3 d-flex justify-content-between">
+                    <span><strong>Tổng cộng</strong></span>
+                    <span>
+                        <strong ng-if="mgg!=discount">{{calculateTotal() + shipcod | number}} đ</strong>
+                        <strong ng-if="mgg==discount">{{calculateTotal() + shipcod - priceDiscount | number}}đ</strong>    
+                    </span>
+                </div>
+                <div class="d-flex justify-content-between py-3">
+                    <a href="#!cart" class="nav-link text-primary">Quay lại giỏ hàng</a>
+                    <button class="btn btn-primary">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

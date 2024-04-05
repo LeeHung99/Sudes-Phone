@@ -1,0 +1,501 @@
+<link rel="stylesheet" href="css/product-detail.css">
+<section class="path-title text-bg-light">
+    <div class="container d-flex p-2">
+        <a href="#" class="nav-link">Trang Chủ</a>
+        <span class="px-2">/</span>
+        <a href="#!danhmucsp/{{detail.category}}" class="nav-link">{{detail.category | uppercase}}</a>
+        <span class="px-2">/</span>
+        <a href="#!danhmucsp/{{detail.type}}" class="nav-link">{{detail.type | uppercase}}</a>
+        <span class="px-2">/</span>
+        <a class="nav-link text-danger">{{detail.name}}</a>
+    </div>
+</section>
+<section class="main-product-detail my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row align-middle">
+                    <div class="col-md-5">
+                        <div class="product-img">
+                            <img src="{{detail.image}}" alt="" width="100%">
+                        </div>
+                        <div class="banner-product-detail">
+                            <img src="image/product_banner.webp" alt="" width="100%" class="rounded-2">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="box-content-img">
+                            <h3>{{detail.name}}</h3>
+                            <p>Mã sản phẩm: {{detail.id}}</p>
+                            <p>
+                                <span>Thương hiệu:<span class="badge text-bg-warning">{{detail.brand}}</span> </span>
+                                <span>|</span>
+                                <span>Tình trạng: <span class="badge text-bg-danger">còn hàng</span></span>
+                            </p>
+                            <hr>
+                            <p class="d-flex">
+                            <h3 class="text-danger">{{detail.price - (detail.price * detail.sale / 100) | number}} đ
+                            </h3>
+                            <del>{{detail.price | number}} đ</del>
+                            </p>
+                            <p>Màu sắc:
+                                <span style="font-weight: 600;">
+                                    <span class="badge" style="background-color: {{detail.color}};">{{detail.color}}</span>
+                                </span>
+                            </p>
+                            <p>
+                                ✔️Máy mới Fullbox 100% - Chưa Active - Chính Hãng Apple
+                                <br>
+                                ✔️Được hỗ trợ 1 đổi 1 trong 30 ngày nếu có lỗi từ nhà sản xuất
+                                <br>
+                                ✔️Bảo hành chính hãng Apple 12 tháng
+                            </p>
+                            <div class="quantity d-flex">
+                                <span class="pe-2">Số lượng: </span>
+                                <div class="box-quantity">
+                                    <button style="border-top-left-radius: 4px;
+                                        border-bottom-left-radius: 4px;">-</button>
+                                    <input type="text" value="1" maxlength="3">
+                                    <button style="border-top-right-radius: 4px;
+                                        border-bottom-right-radius: 4px;">+</button>
+                                </div>
+                            </div>
+                            <div class="btn-shop-cart mt-3">
+                                <button class="rounded-2 buy-now">
+                                    <span> MUA NGAY</span>
+                                    <br>
+                                    <span>Giao tận nơi hoặc nhận tại cửa hàng</span>
+                                </button>
+                                <button ng-click="addToCart(detail)" class="rounded-2 add-cart">
+                                    <span><i class="fa-solid fa-cart-plus"></i></span>
+                                    <br>
+                                    <span>Thêm vào giỏ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <div class="card-header text-bg-danger">
+                        <i class="fa-solid fa-gift"></i>
+                        &nbsp;Khuyến mãi đặc biệt
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            - Giảm trực tiếp 40%, tối đa
+                            <strong class="text-danger">600.000 VNĐ</strong>
+                            &nbsp;khi mở thẻ TP Bank EVO&nbsp;.
+                            <br>
+                            -&nbsp;Giảm ngay
+                            <strong class="text-danger">100.000đ</strong>
+                            khi mua kèm
+                            <strong class="text-danger">Apple Watch Series 8 | Ultra.</strong>
+                            <br>
+                            -&nbsp;Tặng gói bảo hành 1 đổi 1 rơi vỡ (có thể quy đổi).
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header text-bg-dark">
+                        <i class="fa-solid fa-circle-check"></i>
+                        &nbsp;Chính sách hỗ trợ
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="polyci-item d-flex border-bottom">
+                                    <div class="img-polyci-item">
+                                        <img src="image/ser_1.svg" alt="" class="p-2">
+                                    </div>
+                                    <div class="info-polyci-item p-2">
+                                        <h6>Vận chuyển miễn phí</h6>
+                                        <span>Hóa đơn trên 5 triệu</span>
+                                    </div>
+                                </div>
+                                <div class="polyci-item d-flex border-bottom">
+                                    <div class="img-polyci-item">
+                                        <img src="image/ser_2.svg" alt="" class="p-2">
+                                    </div>
+                                    <div class="info-polyci-item p-2">
+                                        <h6>Quà tặng</h6>
+                                        <span>Hóa đơn trên 10 triệu</span>
+                                    </div>
+                                </div>
+                                <div class="polyci-item d-flex border-bottom">
+                                    <div class="img-polyci-item">
+                                        <img src="image/ser_3.svg" alt="" class="p-2">
+                                    </div>
+                                    <div class="info-polyci-item p-2">
+                                        <h6>Chứng nhận chất lượng</h6>
+                                        <span>Sản phẩm chính hãng</span>
+                                    </div>
+                                </div>
+                                <div class="polyci-item d-flex">
+                                    <div class="img-polyci-item">
+                                        <img src="image/ser_4.svg" alt="" class="p-2">
+                                    </div>
+                                    <div class="info-polyci-item p-2">
+                                        <h6>Hotline: 0962.62.5555</h6>
+                                        <span>Hỗ trợ 24/24</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-8">
+                <h4>THÔNG TIN SẢN PHẨM</h4>
+                <p>
+                    Trong loạt siêu phẩm iPhone 2020, iPhone 12 được cho là mẫu máy đáng mua nhất nhờ có nhiều ưu
+                    điểm vượt trội so với iPhone 11,
+                    đồng thời không quá thua thiệt các anh em “Pro”.
+                    Trong đó, phiên bản iPhone 12 256GB lại càng hấp dẫn hơn với khả năng lưu trữ không giới hạn.
+                </p>
+                <strong>Thiết kế vuông vức mang dáng dấp iPhone 5</strong>
+                <p>
+                    Thay đổi về thiết kế là dễ nhận thấy nhất trên iPhone 12, đó là sự pha trộn giữa mới và cũ, khi
+                    kết hợp giữa sự vuông vức, chắc chắn từ thời iPhone 5,
+                    với những công nghệ mới nhất hiện tại như FaceID, màn hình tràn viền của năm 2020…
+                </p>
+                <img src="image/img-detail.webp" alt="" width="100%" class="py-4">
+                <p>
+                    Tuy không phải là sáng tạo đột phá nhưng đặt trong bối cảnh giới smartphone đã quá quen thuộc
+                    với
+                    kiểu thiết kế bo tròn mọi thứ, iPhone 12 dễ dàng có được sự khác biệt và độc đáo rất riêng.
+                </p>
+                <strong>Màn hình được nâng cấp mạnh mẽ</strong>
+                <p>
+                    Màn hình của iPhone 12 là điểm nâng cấp rõ nét nhất so với người tiền nhiệm khi Apple đã hào
+                    phóng trang bị màn hình OLED cao cấp hơn và độ phân giải đạt Super Retina 2532 x 1170 pixels cực
+                    rõ nét.
+                </p>
+                <p>Như vậy, màn hình trên mẫu iPhone mới chắc chắn “ăn đứt” đàn anh khi nói đến độ tương phản, độ
+                    sáng. Ngoài ra viền màn hình trên iPhone 12 cũng gọn hơn hẳn so với iPhone 11.
+                </p>
+                <p>Màn hình này cũng được trang bị lớp kính bảo vệ Ceramic Shield với khả năng chỗ bể vỡ cao hơn gấp
+                    4 lần kính cường lực thông thường.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <div class="specifications">
+                    <h5>THÔNG SỐ KỸ THUẬT</h5>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Hãng sản xuất</td>
+                                <td>Apple</td>
+                            </tr>
+                            <tr>
+                                <td>Kích thước màn hình</td>
+                                <td>6.7 inches</td>
+                            </tr>
+                            <tr>
+                                <td>Độ phân giải màn hình</td>
+                                <td>2796 x 1290-pixel</td>
+                            </tr>
+                            <tr>
+                                <td>Công nghệ màn hình</td>
+                                <td>Super Retina XDR OLED</td>
+                            </tr>
+                            <tr>
+                                <td>Bộ nhớ trong</td>
+                                <td>64/128/256/512GB 1TB</td>
+                            </tr>
+                            <tr>
+                                <td>Chipset</td>
+                                <td>A17 Pro</td>
+                            </tr>
+                            <tr>
+                                <td>CPU</td>
+                                <td>CPU 6 lõi mới với 2 lõi hiệu năng và 4 lõi hiệu suất</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mb-5" style="text-align: center;">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-specifications" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Xem cấu hình chi tiết
+                            <i class="fa-solid fa-caret-down"></i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Thông số kỹ thuật</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-bordered table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Hãng sản xuất</td>
+                                                    <td>Apple</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kích thước màn hình</td>
+                                                    <td>6.7 inches</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Độ phân giải màn hình</td>
+                                                    <td>2796 x 1290-pixel</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Công nghệ màn hình</td>
+                                                    <td>Super Retina XDR OLED</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bộ nhớ trong</td>
+                                                    <td>64/128/256/512GB 1TB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chipset</td>
+                                                    <td>A17 Pro</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CPU</td>
+                                                    <td>CPU 6 lõi mới với 2 lõi hiệu năng và 4 lõi hiệu suất</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GPU</td>
+                                                    <td>GPU 6 nhân mới</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kích thước</td>
+                                                    <td>159,9 x 76,7 x 8,25 mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trọng lượng </td>
+                                                    <td>221 g</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Camera sau</td>
+                                                    <td>Camera chính: 48MP, 24 mm, ƒ/1.78,
+                                                        Camera góc siêu rộng: 12 MP, 13 mm, ƒ/2.2
+                                                        Camera Tele 5x: 12 MP, 120 mm, ƒ/2.8
+                                                        Camera Tele 2x: 12 MP, 48 mm, ƒ/1.78</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Camera trước</td>
+                                                    <td>12MP, ƒ/1.9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Quay video</td>
+                                                    <td>4K@24/25/30/60 fps
+                                                        HD 1080p@25/30/60 fps
+                                                        HD 720p@30 fps</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pin</td>
+                                                    <td>4422 mAh</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Loại SIM</td>
+                                                    <td>2 SIM (nano‑SIM và eSIM)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hệ điều hành</td>
+                                                    <td>IOS</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phiên bản hệ điều hành</td>
+                                                    <td>iOS 17</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hỗ trợ mạng</td>
+                                                    <td>5G</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wi-Fi</td>
+                                                    <td>Wi‑Fi 6E (802.11ax)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bluetooth</td>
+                                                    <td>5.3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GPS</td>
+                                                    <td>GPS tần số kép chính xác (GPS, GLONASS, Galileo, QZSS,
+                                                        BeiDou và NavIC)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cảm biến</td>
+                                                    <td>Cảm biến gia tốc, Cảm biến tiệm cận, Cảm biến ánh sáng, La
+                                                        bàn, Con quay hồi chuyển, Cảm biến áp kế, Cảm biến trọng lực
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-news">
+                    <h5>TIN TỨC NỔI BẬT</h5>
+                    <ul class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action p-0">
+                            <div class="row g-0 d-flex align-items-center">
+                                <div class="col-md-4">
+                                    <img src="image/news-2.webp" class="img-fluid rounded-2" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-3">
+                                        <p class="card-text m-0">
+                                            <small>
+                                                Apple 'in tiền' đỉnh thế nào: Cá kiếm từ cả điện thoại cũ lẫn
+                                                mới..
+                                            </small>
+                                        </p>
+                                        <p class="card-text"> <i class="fa-solid fa-clock"
+                                                style="color: #8f8f8f;padding-right: 5px;"></i><small
+                                                class="text-body-secondary">07/11/2023</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-0">
+                            <div class="row g-0 d-flex align-items-center">
+                                <div class="col-md-4">
+                                    <img src="image/news-3.webp" class="img-fluid rounded-2" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-3">
+                                        <p class="card-text m-0">
+                                            <small>
+                                                Đây là mẫu iphone chính hãng 'phá giá' tại việt nam...
+                                            </small>
+                                        </p>
+                                        <p class="card-text"> <i class="fa-solid fa-clock"
+                                                style="color: #8f8f8f;padding-right: 5px;"></i><small
+                                                class="text-body-secondary">07/11/2023</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-0">
+                            <div class="row g-0 d-flex align-items-center">
+                                <div class="col-md-4">
+                                    <img src="image/news-4.webp" class="img-fluid rounded-2" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-3">
+                                        <p class="card-text m-0">
+                                            <small>
+                                                Lộ giá iphone 15 khiến người giàu phải cũng khóc...
+                                            </small>
+                                        </p>
+                                        <p class="card-text"> <i class="fa-solid fa-clock"
+                                                style="color: #8f8f8f;padding-right: 5px;"></i><small
+                                                class="text-body-secondary">07/11/2023</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-0">
+                            <div class="row g-0 d-flex align-items-center">
+                                <div class="col-md-4">
+                                    <img src="image/news-12.webp" class="img-fluid rounded-2" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-3">
+                                        <p class="card-text m-0">
+                                            <small>
+                                                Ngân sách dưới 10 triệu đồng: người dùng thà mua cũ...
+                                            </small>
+                                        </p>
+                                        <p class="card-text"> <i class="fa-solid fa-clock"
+                                                style="color: #8f8f8f;padding-right: 5px;"></i><small
+                                                class="text-body-secondary">07/11/2023</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-0">
+                            <div class="row g-0 d-flex align-items-center">
+                                <div class="col-md-4">
+                                    <img src="image/news-5.webp" class="img-fluid rounded-2" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-3">
+                                        <p class="card-text m-0">
+                                            <small>
+                                                Peak Design 'lấn sân' sang mảng phụ kiện di động, ra mắt ốp
+                                                siêu...
+                                            </small>
+                                        </p>
+                                        <p class="card-text"> <i class="fa-solid fa-clock"
+                                                style="color: #8f8f8f;padding-right: 5px;"></i><small
+                                                class="text-body-secondary">07/11/2023</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <h4>SẢN PHẨM LIÊN QUAN</h4>
+            <div class="col-lg-3" ng-repeat="sp in listSP | filter : {type:detail.type} | limitTo:4:1">
+                <div class="box-product-sale" id="box-product">
+                    <span class="flash-sale-product">Giảm {{sp.sale}}%</span>
+                    <div class="img-product">
+                        <a href="">
+                            <img src="{{sp.image}}" alt="">
+                        </a>
+                        <div class="action-button">
+                            <a title="Xem nhanh" href="">
+                                <img src="image/eye.svg" alt="">
+                            </a>
+                            <a title="Thêm vào yêu thích" href="">
+                                <img src="image/heart.webp" alt="">
+                            </a>
+                            <a title="Thêm vào so sánh" href="">
+                                <img src="image/repeat.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="tick-tag">
+                            <span>Trả góp 0%</span>
+                            <span>BH 12 tháng</span>
+                        </div>
+                    </div>
+                    <div class="info-product">
+                        <h4>
+                            <a href="">{{sp.name}}</a>
+                        </h4>
+                        <div class="price-product">
+                            <span class="price-sale">
+                                {{sp.price | number}} đ
+                            </span>
+                            <span class="price">
+                                {{sp.price - (sp.price * sp.sale / 100) | number}} đ
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content-product">
+                        <p>
+                            Giảm
+                            <strong style="color: #bf1e2e;">250.000đ</strong>
+                            khi mua kèm gói bảo hành VIP 12 tháng 1 Đổi 1.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

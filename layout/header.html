@@ -1,0 +1,170 @@
+<div class="container">
+    <div class="main-header">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="image/logo.webp" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="header-search">
+                    <input type="text" ng-model="keyword" placeholder="Tìm kiếm sản phẩm">
+                    <a href="#!danhmucsp/{{keyword}}"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="header-box-icon">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="header-box">
+                                <div class="box-icon">
+                                    <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+                                </div>
+                                <div class="content-box-icon">
+                                    <span>Hệ thống cửa hàng</span>
+                                    <p>7 Cửa hàng</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="header-box">
+                                <div class="box-icon">
+                                    <i class="fa-solid fa-phone-volume fa-shake" style="color: #ffffff;"></i>
+                                </div>
+                                <div class="content-box-icon">
+                                    <span>Gọi mua hàng</span>
+                                    <p>0962.62.5555</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="header-box" id="box-user">
+                                <div class="box-icon">
+                                    <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+                                </div>
+                                <div class="content-box-icon">
+                                    <span>Thông tin</span>
+                                    <p>Tài khoản <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i>
+                                    </p>
+                                </div>
+                                <div class="info-user">
+                                    <li><a href="#!login">Đăng nhập <i class="fa-solid fa-arrow-right-to-bracket"
+                                                style="color: #000000;"></i></a></li>
+                                    <li><a href="#!register">Đăng kí <i class="fa-solid fa-user-plus"
+                                                style="color: #000000;"></i></a></li>
+                                    <li><a href="">Danh sách yêu thích <i class="fa-regular fa-heart"
+                                                style="color: #000000;"></i></a></li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#!cart" style="text-decoration: none;">
+                                <div class="header-box">
+                                    <div class="box-icon">
+                                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                                        <span class="badge bg-danger rounded-circle number-sp">{{dem}}</span>
+                                    </div>
+                                    <div class="content-box-icon">
+                                        <span>Giỏ Hàng</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="menu-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="menu">
+                    <li><a href="#!home">Trang Chủ</a></li>
+                    <li><a href="">Giới Thiệu</a></li>
+                    <li class="iphone">
+                        <a href="#!danhmucsp/iphone">iPhone <i class="fa-solid fa-angle-down"
+                                style="color: #ffffff;"></i></a>
+                        <div class="hien-menu">
+                            <div class="menu-iphone">
+                                <ul>
+                                    <li class="tilte-iphone"><a href="">IPHONE 15 SERIES</a></li>
+                                    <li><a href="">iPhone 15</a></li>
+                                    <li><a href="">iPhone 15 Plus</a></li>
+                                    <li><a href="">iPhone 15 Pro</a></li>
+                                    <li><a href="">iPhone 15 Pro Max</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="tilte-iphone"><a href="">IPHONE 14 SERIES</a></li>
+                                    <li><a href="">iPhone 14</a></li>
+                                    <li><a href="">iPhone 14 Plus</a></li>
+                                    <li><a href="">iPhone 14 Pro</a></li>
+                                    <li><a href="">iPhone 14 Pro Max</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="tilte-iphone"><a href="">IPHONE 13 SERIES</a></li>
+                                    <li><a href="">iPhone 13</a></li>
+                                    <li><a href="">iPhone 13 Mini</a></li>
+                                    <li><a href="">iPhone 13 Pro</a></li>
+                                    <li><a href="">iPhone 13 Pro Max</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="tilte-iphone"><a href="">IPHONE 12 SERIES</a></li>
+                                    <li><a href="">iPhone 12</a></li>
+                                    <li><a href="">iPhone 12 Mini</a></li>
+                                    <li><a href="">iPhone 12 Pro</a></li>
+                                    <li><a href="">iPhone 12 Pro Max</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="ipad">
+                        <a href="#!danhmucsp/ipad">iPad <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></a>
+                        <ul class="menu-ipad">
+                            <li><a href="">iPad Pro</a></li>
+                            <li><a href="">iPad Air</a></li>
+                            <li><a href="">iPad 10.9</a></li>
+                            <li><a href="">iPad 10.2</a></li>
+                            <li><a href="">iPad Mini</a></li>
+                        </ul>
+                    </li>
+                    <li class="macbook">
+                        <a href="#!danhmucsp/macbook">MacBook - iMac <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></a>
+                        <ul class="menu-macbook">
+                            <li><a href="">MacBook Pro</a></li>
+                            <li><a href="">MacBook Air</a></li>
+                        </ul>
+                    </li>
+                    <li class="apple-watch">
+                        <a href="#!danhmucsp/apple watch">Apple Watch <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></a>
+                        <ul class="menu-apple-watch">
+                            <li><a href="">Apple Watch Ultra</a></li>
+                            <li><a href="">Apple Watch SE</a></li>
+                            <li><a href="">Apple Watch S8</a></li>
+                            <li><a href="">Apple Watch S7</a></li>
+                            <li><a href="">Apple Watch S6</a></li>
+                            <li><a href="">Apple Watch S3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page/air-pod.html">Airpods</a></li>
+                    <li class="phukien">
+                        <a href="">Phụ kiện <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></a>
+                        <ul class="menu-phukien">
+                            <li><a href="">Phụ Kiện Apple</a></li>
+                            <li><a href="">Cóc - Cáp Sạc</a></li>
+                            <li><a href="">Bao Da - Ốp Lưng</a></li>
+                            <li><a href="">Kính Cường Lực</a></li>
+                            <li><a href="">Sạc Dự Phòng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!chinhsach">Chính Sách</a></li>
+                    <li><a href="#!tintuc">Tin Tức</a></li>
+                    <li><a href="#!lienhe">Liên Hệ</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,78 @@
+<style>
+    .title-register a:hover {
+        color: #bf1e2e;
+    }
+
+    .box-register {
+        box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.15), 1px 1px 5px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        position: relative;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .btn-register {
+        width: 100%;
+        height: 40px;
+    }
+
+    .btn-register:hover {
+        background-color: #bf1e2e;
+        color: #fff;
+        border: #bf1e2e;
+    }
+</style>
+
+<section class="path-title text-bg-light">
+    <div class="container d-flex p-2">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <span class="px-2">/</span>
+        <a href="register.html" class="nav-link text-danger">Đăng ký tài khoản</a>
+    </div>
+</section>
+<section class="main-register my-4">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-middle">
+            <div class="col-md-4">
+                <div class="box-register">
+                    <form class="p-4" name="frmRegister">
+                        <div class="title-register text-center">
+                            <h3 class="mb-4">ĐĂNG KÝ</h3>
+                            <p class="d-flex justify-content-center">Đã có tài khoản đăng nhập&nbsp;<a href="#!login"
+                                    class="nav-link">tại đây</a></p>
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control" name="name" ng-model="name" placeholder="Họ và tên" required>
+                        </div>
+                        <div ng-show="frmRegister.name.$dirty && frmRegister.name.$invalid" class="text-danger">Nhập tên</div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" name="email" ng-model="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com$" placeholder="Email" required>
+                        </div>
+                        <div ng-show="frmRegister.email.$dirty && frmRegister.email.$invalid" class="text-danger">Email không hợp lệ</div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></i></span>
+                            <input type="text" class="form-control" placeholder="Số điện thoại">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" class="form-control" placeholder="Mật khẩu">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" class="form-control" placeholder="Địa chỉ">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Tôi đồng ý với các điều
+                                khoản</label>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-register">ĐĂNG KÝ TÀI KHOẢN</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
